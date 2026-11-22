@@ -43,5 +43,9 @@ const FAQS = [
   },
 ];
 
+// Small talk the bot should answer politely instead of offering a handoff.
+const GREETING_KEYWORDS = ["hi", "hello", "hey", "hiya", "morning", "afternoon", "evening", "yo", "sup"];
+const THANKS_KEYWORDS = ["thanks", "thank", "thx", "ty", "cheers"];
+
 // Phrases that mean the customer wants a person right away.
 const HUMAN_KEYWORDS = ["human", "agent", "person", "staff", "manager", "someone", "real", "talk", "speak", "complaint"];

@@ -27,6 +27,10 @@ function findFaq(text) {
   return best;
 }
 
+function hasAny(text, keywords) {
+  return tokenize(text).some((w) => keywords.includes(w));
+}
+
 function wantsHuman(text) {
   const words = tokenize(text);
   return HUMAN_KEYWORDS.some((k) => words.includes(k));
@@ -169,6 +173,12 @@ function handleUser(text, knownFaq) {
         { label: "Ask something else", onClick: () => reply(() => { addMessage("Of course! Pick a topic or type your question:", "bot"); addButtons(faqButtons()); }, 500) },
         { label: "Talk to a human", primary: true, onClick: () => { addMessage("I'd like to talk to a human", "user"); startHandoff(); } },
       ]);
+    } else if (hasAny(text, GREETING_KEYWORDS)) {
+      addMessage(`Hi! 👋 Welcome to ${BUSINESS.name}. What can I help you with today?`, "bot");
+      addButtons(faqButtons());
+    } else if (hasAny(text, THANKS_KEYWORDS)) {
+      addMessage("You're welcome! ☕ Anything else I can help with?", "bot");
+      addButtons(faqButtons());
     } else {
       offerHandoff("Sorry, I'm not sure about that one. Would you like me to connect you with a member of our team?");
     }
