@@ -55,6 +55,14 @@ h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.15; margin: 16px 0 12px; 
   box-shadow: 0 6px 18px rgba(242, 140, 40, 0.35);
 }
 .cta:hover { filter: brightness(1.05); }
+.link {
+  display: inline-block;
+  margin-left: 16px;
+  color: var(--white);
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+.link:hover { color: var(--orange); }
 .hint { font-size: 13px; opacity: 0.75; margin-top: 14px; }
 
 /* Chat preview */

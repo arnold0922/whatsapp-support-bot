@@ -134,8 +134,8 @@ function offerHandoff(reason) {
 function startHandoff() {
   mode = "human";
   reply(() => {
-    addMessage("Connecting you with our team now. A barista will reply in a moment ☕", "bot");
-    addSystemNote(`${BUSINESS.agentName} from Brew & Bean joined the chat`);
+    addMessage("Connecting you with our team now. Someone will reply in a moment ☕", "bot");
+    addSystemNote(`${BUSINESS.agentName} from ${BUSINESS.name} joined the chat`);
     reply(() => {
       addMessage(
         `Hi! I'm ${BUSINESS.agentName}. I've read your conversation so far. How can I help you today?`,
