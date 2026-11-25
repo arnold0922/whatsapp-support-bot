@@ -1,6 +1,6 @@
 :root {
-  --navy: #1b2a4a;
-  --navy-soft: #2c3e66;
+  --navy: #2b3f66;
+  --navy-soft: #3d5482;
   --orange: #f28c28;
   --orange-soft: #fde8d3;
   --white: #ffffff;
@@ -46,6 +46,13 @@ body {
   color: var(--white);
   border-bottom: 3px solid var(--orange);
 }
+.back {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 4px;
+}
+.back:hover { color: var(--orange); }
 .avatar {
   width: 42px; height: 42px;
   border-radius: 50%;

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brew &amp; Bean Support Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="phone">
+    <header class="top">
+      <a href="index.html" class="back" title="Back to home" aria-label="Back to home">←</a>
+      <div class="avatar">☕</div>
+      <div class="who">
+        <div class="name">Brew &amp; Bean Coffee</div>
+        <div class="status" id="status">AI assistant · online</div>
+      </div>
+      <button id="reset" class="reset" type="button" title="Start a new chat">Reset chat</button>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <form id="composer" class="composer">
+      <input id="input" type="text" placeholder="Type a message" autocomplete="off" aria-label="Message" />
+      <button type="submit" class="send" aria-label="Send">➤</button>
+    </form>
+  </main>
+
+  <script src="faq.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

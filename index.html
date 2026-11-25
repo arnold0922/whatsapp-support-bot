@@ -3,29 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brew &amp; Bean Support Chat</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Brew &amp; Bean AI Support</title>
+  <link rel="stylesheet" href="landing.css" />
 </head>
 <body>
-  <main class="phone">
-    <header class="top">
-      <div class="avatar">☕</div>
-      <div class="who">
-        <div class="name">Brew &amp; Bean Coffee</div>
-        <div class="status" id="status">AI assistant · online</div>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="tag">WhatsApp-style AI support demo</span>
+        <h1>Brew &amp; Bean AI Support</h1>
+        <p class="pitch">Instant answers to common coffee shop questions, with a real person always one tap away.</p>
+        <a class="cta" href="chat.html">Try the demo →</a>
+        <p class="hint">No sign-up. Try "what time do you open?" or "talk to a human".</p>
       </div>
-      <button id="reset" class="reset" type="button" title="Start a new chat">Reset chat</button>
-    </header>
 
-    <section id="messages" class="messages" aria-live="polite"></section>
+      <div class="preview" aria-hidden="true">
+        <div class="p-head"><span class="p-avatar">☕</span><div><b>Brew &amp; Bean Coffee</b><small>AI assistant · online</small></div></div>
+        <div class="p-body">
+          <div class="p-bot">Hi there! 👋 How can I help you today?</div>
+          <div class="p-user">What time do you open?</div>
+          <div class="p-bot">Mon–Fri 7:00 AM – 8:00 PM<br />Sat–Sun 8:00 AM – 6:00 PM</div>
+          <div class="p-user">Can I talk to a person?</div>
+          <div class="p-note">Maria from Brew &amp; Bean joined the chat</div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <form id="composer" class="composer">
-      <input id="input" type="text" placeholder="Type a message" autocomplete="off" aria-label="Message" />
-      <button type="submit" class="send" aria-label="Send">➤</button>
-    </form>
+  <main class="info">
+    <section class="card">
+      <h2>Key decisions</h2>
+      <ul>
+        <li><b>Simulated AI.</b> Keyword matching is free, needs no API key and always works in a demo.</li>
+        <li><b>A person is always one tap away.</b> "Talk to a human" shows after every answer, and unknown questions offer a handoff instead of a guess.</li>
+        <li><b>FAQs kept apart from the code.</b> To change the questions or answers, you edit only <code>faq.js</code>.</li>
+        <li><b>Plain HTML, CSS and JavaScript.</b> Nothing to install, quick to load, easy to read.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>AI tools used</h2>
+      <p>Claude Code helped plan the features, write the code and draft the documentation. Every choice was reviewed and approved before it was built.</p>
+    </section>
+
+    <section class="card">
+      <h2>What I'd improve next</h2>
+      <ol>
+        <li>Use a language model that answers only from the FAQs, and hands off when it isn't confident.</li>
+        <li>Connect to the WhatsApp Business API and a support inbox for real staff.</li>
+        <li>Give staff a short summary of the chat at handoff.</li>
+        <li>Log unanswered questions to see which FAQs to add next.</li>
+      </ol>
+    </section>
   </main>
 
-  <script src="faq.js"></script>
-  <script src="app.js"></script>
+  <footer class="foot">Brew &amp; Bean AI Support · demo project</footer>
 </body>
 </html>

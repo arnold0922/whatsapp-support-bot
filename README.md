@@ -3,7 +3,7 @@
 A chat demo for a coffee shop. The bot answers common FAQs and hands the conversation over to a human when it can't help.
 
 ## Run it
-No install or server needed. Open `index.html` in any browser.
+No install or server needed. Open `index.html` (the landing page) in any browser and click **Try the demo** to open the chat (`chat.html`).
 (Or run `npx serve .` and open the link it prints.)
 
 ## What it does
@@ -16,8 +16,10 @@ No install or server needed. Open `index.html` in any browser.
 ## Files
 | File | Purpose |
 |---|---|
-| `index.html` | Page layout |
-| `styles.css` | Navy / warm orange / white theme |
+| `index.html` | Landing page: intro, key decisions, next steps |
+| `landing.css` | Landing page styles |
+| `chat.html` | Chat page layout |
+| `styles.css` | Chat theme: navy / warm orange / white |
 | `faq.js` | Knowledge base: questions, keywords and answers |
 | `app.js` | Chat logic: matching, typing indicator, handoff |
 
