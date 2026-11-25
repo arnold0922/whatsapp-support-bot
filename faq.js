@@ -1,7 +1,7 @@
-// Knowledge base for "Brew & Bean Coffee".
+// Knowledge base for Boucla Cafe, Subiaco.
 // Each FAQ has keywords used for matching and a quick-reply label.
 const BUSINESS = {
-  name: "Brew & Bean Coffee",
+  name: "Boucla Cafe",
   agentName: "Maria",
 };
 
@@ -9,39 +9,43 @@ const FAQS = [
   {
     id: "hours",
     label: "Opening hours",
-    keywords: ["hour", "hours", "open", "opening", "close", "closing", "time", "today", "weekend", "sunday"],
+    keywords: ["hour", "hours", "open", "opening", "close", "closing", "closed", "time", "today", "weekend", "saturday", "sunday", "holiday", "christmas"],
     answer:
-      "We're open:\n• Mon–Fri: 7:00 AM – 8:00 PM\n• Sat–Sun: 8:00 AM – 6:00 PM\nHoliday hours are posted on our Instagram.",
+      "Our opening hours:\n• Mon–Fri: 6:30 AM – 3:00 PM\n• Saturday: 7:00 AM – 3:00 PM\n• Sunday & public holidays: 8:00 AM – 1:00 PM\nWe're closed on Christmas Day and Boxing Day.",
+  },
+  {
+    id: "cakes",
+    label: "Cakes & pre-orders",
+    keywords: ["cake", "slice", "birthday", "whole", "gluten", "apple", "sicilian", "pre-order", "preorder", "dessert", "sweet"],
+    answer:
+      "Our cakes are handmade and baked every morning. There are usually 4 kinds on display until they sell out.\n• Slice: $9.50\n• Whole cake: $90\n• Whole Apple Sicilian: $99 (not gluten-free)\n• Double-layer cake: $180\nTo pre-order a whole cake, email orders@boucla.com.au.",
   },
   {
     id: "menu",
     label: "Menu & prices",
-    keywords: ["menu", "price", "prices", "cost", "latte", "coffee", "drink", "drinks", "pastry", "food", "espresso", "cappuccino"],
+    keywords: ["menu", "price", "prices", "cost", "food", "eat", "breakfast", "brunch", "lunch", "shakshuka", "kotopita", "pie", "eggs", "coffee", "vegetarian"],
     answer:
-      "Some favourites:\n• Espresso – $3.00\n• Cappuccino / Latte – $4.50\n• Cold brew – $4.75\n• Croissants & muffins – from $3.25\nWe have oat, almond and soy milk at no extra charge.",
+      "We serve Mediterranean-inspired breakfast and lunch. Some favourites:\n• Shakshuka – $22\n• Kotopita (Greek-style chicken pie) – $18\n• Turkish eggs and huevos rancheros\nThe full menu is on our website.",
   },
   {
-    id: "delivery",
-    label: "Delivery & pickup",
-    keywords: ["delivery", "deliver", "pickup", "pick", "order", "online", "takeaway", "takeout", "uber", "app"],
+    id: "location",
+    label: "Location & seating",
+    keywords: ["where", "address", "location", "located", "find", "directions", "parking", "park", "courtyard", "seat", "seating", "outdoor", "subiaco", "rokeby"],
     answer:
-      "You can order ahead for pickup on our website, or get delivery through Uber Eats and DoorDash within 5 km. Pickup orders are usually ready in about 10 minutes.",
+      "You'll find us at 349 Rokeby Road, Subiaco WA 6008. We have cosy indoor seating and a leafy courtyard out the back.",
   },
   {
-    id: "wifi",
-    label: "Wi-Fi & seating",
-    keywords: ["wifi", "wi-fi", "internet", "laptop", "work", "seat", "seating", "study", "plug", "outlet"],
+    id: "contact",
+    label: "Contact us",
+    keywords: ["phone", "call", "number", "email", "contact", "book", "booking", "reservation", "reserve"],
     answer:
-      "Yes! Free Wi-Fi is available. The password is on your receipt. We have 30 seats, with power outlets along the window bar.",
-  },
-  {
-    id: "loyalty",
-    label: "Loyalty card",
-    keywords: ["loyalty", "reward", "rewards", "points", "stamp", "card", "free", "discount", "promo"],
-    answer:
-      "Get a stamp for every drink you buy. Your 10th drink is free! Ask the barista for a card or sign up in our app.",
+      "You can reach us at:\n• Phone: (08) 9381 2841\n• Email: orders@boucla.com.au (for cake pre-orders)",
   },
 ];
+
+// Small talk the bot should answer politely instead of offering a handoff.
+const GREETING_KEYWORDS = ["hi", "hello", "hey", "hiya", "morning", "afternoon", "evening", "yo", "sup"];
+const THANKS_KEYWORDS = ["thanks", "thank", "thx", "ty", "cheers"];
 
 // Phrases that mean the customer wants a person right away.
 const HUMAN_KEYWORDS = ["human", "agent", "person", "staff", "manager", "someone", "real", "talk", "speak", "complaint"];

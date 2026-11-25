@@ -3,29 +3,166 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brew &amp; Bean Support Chat</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Boucla Cafe | Comfort Food for Subiaco</title>
+  <link rel="stylesheet" href="landing.css" />
 </head>
 <body>
-  <main class="phone">
-    <header class="top">
-      <div class="avatar">☕</div>
-      <div class="who">
-        <div class="name">Brew &amp; Bean Coffee</div>
-        <div class="status" id="status">AI assistant · online</div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#home" class="logo" aria-label="Boucla Cafe home">
+        <img src="https://boucla-cafe-subiaco.vercel.app/images/logo.webp" alt="Boucla Cafe" />
+      </a>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#about">About</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a class="btn btn-navy" href="tel:+61893812841">Call Now</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="wrap hero-inner">
+      <div class="hero-card">
+        <p class="eyebrow">349 Rokeby Road, Subiaco</p>
+        <h1>Comfort Food for Subiaco</h1>
+        <p class="lead">Mediterranean soul, handmade cakes, and the best breakfast, brunch, and lunch on Rokeby Road — a Subiaco institution for over 20 years.</p>
+        <div class="btn-row">
+          <a class="btn btn-orange" href="#menu">View Menu</a>
+          <a class="btn btn-ghost" href="#cakes">Order Cakes</a>
+        </div>
       </div>
-      <button id="reset" class="reset" type="button" title="Start a new chat">Reset chat</button>
-    </header>
 
-    <section id="messages" class="messages" aria-live="polite"></section>
+      <div class="hours-card">
+        <p class="status"><span class="dot" id="status-dot"></span><b id="status-text">Checking hours…</b></p>
+        <p class="status-sub" id="status-sub">Perth local time</p>
+        <hr />
+        <dl class="hours">
+          <dt>Monday – Friday</dt><dd>6:30 am – 3:00 pm</dd>
+          <dt>Saturday</dt><dd>7:00 am – 3:00 pm</dd>
+          <dt>Sunday / Public Holidays</dt><dd>8:00 am – 1:00 pm</dd>
+          <dt>Christmas &amp; Boxing Day</dt><dd>Closed</dd>
+        </dl>
+        <div class="btn-row">
+          <a class="btn btn-orange" href="#menu">Breakfast &amp; Lunch</a>
+          <a class="btn btn-outline" href="#cakes">Cake Pre-orders</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <form id="composer" class="composer">
-      <input id="input" type="text" placeholder="Type a message" autocomplete="off" aria-label="Message" />
-      <button type="submit" class="send" aria-label="Send">➤</button>
-    </form>
-  </main>
+  <!-- Highlights -->
+  <section class="wrap highlights">
+    <div><b>20+ Years in Subiaco</b><span>A cherished Rokeby Road institution</span></div>
+    <div><b>Greek Heritage</b><span>Family roots from Kastellorizo</span></div>
+    <div><b>Renowned Cakes</b><span>Handmade slices and whole cakes daily</span></div>
+    <div><b>Leafy Courtyard</b><span>Quiet rear seating among the greenery</span></div>
+  </section>
 
-  <script src="faq.js"></script>
-  <script src="app.js"></script>
+  <!-- About -->
+  <section class="wrap split" id="about">
+    <img class="split-img" src="https://boucla-cafe-subiaco.vercel.app/images/courtyard.jpg" alt="Leafy rear courtyard seating at Boucla Cafe" />
+    <div>
+      <p class="eyebrow">Our story</p>
+      <h2>From island to Rokeby Road</h2>
+      <p>A family with Greek heritage, from the island of Kastellorizo, opened Boucla more than 20 years ago. Today it's a Subiaco favourite for Moroccan-inspired surroundings, a leafy courtyard and Mediterranean breakfast and lunch.</p>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section" id="menu">
+    <div class="wrap">
+      <p class="eyebrow">From our kitchen</p>
+      <h2>Dishes worth the visit</h2>
+      <div class="dishes">
+        <article class="dish">
+          <img src="https://boucla-cafe-subiaco.vercel.app/images/breakfast-shakshuka.jpg" alt="Shakshuka" />
+          <div><h3>Shakshuka <span>$22</span></h3><p>Spiced tomatoes, baked eggs, zaatar Turkish bread and hummus.</p></div>
+        </article>
+        <article class="dish">
+          <img src="https://boucla-cafe-subiaco.vercel.app/images/lunch-pie.jpg" alt="Kotopita" />
+          <div><h3>Kotopita <span>$18</span></h3><p>Greek-style chicken and vegetable pie with tomato relish.</p></div>
+        </article>
+        <article class="dish">
+          <img src="https://boucla-cafe-subiaco.vercel.app/images/cake-display.webp" alt="Cakes on display" />
+          <div><h3>Cake by the slice <span>$9.50</span></h3><p>Handmade slices, baked fresh every morning.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cakes -->
+  <section class="section alt" id="cakes">
+    <div class="wrap cakes">
+      <div>
+        <p class="eyebrow">Renowned cakes</p>
+        <h2>Baked every morning</h2>
+        <p>Usually four kinds on display each day, until they sell out. Pre-order a whole cake by email.</p>
+        <a class="btn btn-orange" href="mailto:orders@boucla.com.au">Email to pre-order</a>
+      </div>
+      <ul class="price-list">
+        <li><span>Slice</span><b>$9.50</b></li>
+        <li><span>Whole cake</span><b>$90</b></li>
+        <li><span>Whole Apple Sicilian <small>(not gluten-free)</small></span><b>$99</b></li>
+        <li><span>Double-layer cake</span><b>$180</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section" id="visit">
+    <div class="wrap visit">
+      <div>
+        <p class="eyebrow">Visit us today</p>
+        <h2>Your Rokeby Road escape</h2>
+        <p>Fresh coffee, handmade cakes and a quiet courtyard for a long conversation or a solo brunch.</p>
+        <p><b>349 Rokeby Road, Subiaco WA 6008</b><br />(08) 9381 2841 · orders@boucla.com.au</p>
+        <a class="btn btn-navy" href="https://maps.google.com/?q=349+Rokeby+Road+Subiaco+WA+6008" target="_blank" rel="noopener">Plan your visit</a>
+      </div>
+      <div class="cta-box">
+        <h3>Questions? Ask our AI assistant</h3>
+        <p>Tap the orange chat button in the corner for hours, cakes, menu and directions. A real person is always one tap away.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About this demo -->
+  <section class="wrap demo-info">
+    <h2>About this demo</h2>
+    <div class="demo-grid">
+      <div><h3>Key decisions</h3><p>Simulated AI (keyword matching) so it's free and always works. A person is always one tap away. FAQs are kept in <code>faq.js</code>, apart from the code.</p></div>
+      <div><h3>AI tools used</h3><p>Claude Code helped plan, write the code and draft the docs. Every choice was reviewed before it was built.</p></div>
+      <div><h3>What I'd improve next</h3><p>A language model answering only from the FAQs, the WhatsApp Business API, chat summaries at handoff, and tracking unanswered questions.</p></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Boucla Cafe · 349 Rokeby Road, Subiaco · Photos from Unsplash (Raamin ka, Mohammad Lotfian, Nico Smit)</p>
+    </div>
+  </footer>
+
+  <script>
+    // Live open/closed status in Perth time.
+    (function () {
+      const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Australia/Perth" }));
+      const day = now.getDay(); // 0 = Sunday
+      const mins = now.getHours() * 60 + now.getMinutes();
+      const hours = { 0: [480, 780], 6: [420, 900] }; // Sun 8–1, Sat 7–3
+      const [open, close] = hours[day] || [390, 900];   // Mon–Fri 6:30–3
+      const fmt = (m) => { const h = Math.floor(m / 60), mm = m % 60; return `${h % 12 || 12}:${String(mm).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`; };
+      const isOpen = mins >= open && mins < close;
+      document.getElementById("status-dot").classList.add(isOpen ? "open" : "closed");
+      document.getElementById("status-text").textContent = isOpen ? "Open now" : "Closed — opens later";
+      document.getElementById("status-sub").textContent = isOpen
+        ? `Closes at ${fmt(close)} today`
+        : mins < open ? `Opens at ${fmt(open)} today` : "See you tomorrow";
+    })();
+  </script>
+  <script src="widget.js" defer></script>
 </body>
 </html>

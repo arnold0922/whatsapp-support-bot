@@ -1,13 +1,21 @@
-# Brew & Bean – WhatsApp-style AI Support Bot (Demo)
+# Boucla Cafe – WhatsApp-style AI Support Bot (Demo)
 
-A chat demo for a coffee shop. The bot answers common FAQs and hands the conversation over to a human when it can't help.
+A chat demo for [Boucla Cafe](https://boucla-cafe-subiaco.vercel.app/), a Mediterranean cafe in Subiaco. The bot answers common FAQs and hands the conversation over to a human when it can't help.
 
 ## Run it
-No install or server needed. Open `index.html` in any browser.
+No install or server needed. Open `index.html` (the landing page) in any browser and click **Try the demo** to open the chat (`chat.html`).
 (Or run `npx serve .` and open the link it prints.)
 
+## Embed on your website
+Add this one line before `</body>` on any page. A floating chat button appears in the bottom-right corner:
+```html
+<script src="https://YOUR-VERCEL-URL/widget.js" defer></script>
+```
+To preview it locally, open `widget-demo.html`. It shows the Boucla site with the widget on top.
+
 ## What it does
-- **5 FAQs:** opening hours, menu & prices, delivery & pickup, Wi-Fi & seating, loyalty card.
+- **5 FAQs:** opening hours, cakes & pre-orders, menu & prices, location & seating, contact details.
+- **Greetings:** "hello" and "thanks" get a friendly reply instead of a handoff.
 - **Quick replies:** tap a topic, or type a question in your own words.
 - **Simulated AI:** keyword matching with a "typing…" delay. No API key, free, and it always works.
 - **Human handoff:** if the bot can't match the question, it offers to connect you to a person. Typing "human", "agent" or "staff" also connects you right away. A support agent (simulated) then joins the chat.
@@ -16,8 +24,10 @@ No install or server needed. Open `index.html` in any browser.
 ## Files
 | File | Purpose |
 |---|---|
-| `index.html` | Page layout |
-| `styles.css` | Navy / warm orange / white theme |
+| `index.html` | Landing page: intro, key decisions, next steps |
+| `landing.css` | Landing page styles |
+| `chat.html` | Chat page layout |
+| `styles.css` | Chat theme: navy / warm orange / white |
 | `faq.js` | Knowledge base: questions, keywords and answers |
 | `app.js` | Chat logic: matching, typing indicator, handoff |
 

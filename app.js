@@ -1,4 +1,9 @@
 // Chat logic: simulated AI that matches FAQs by keywords and hands off to a human.
+
+// Embed mode (inside the website widget): full-size chat with no back link.
+if (new URLSearchParams(location.search).get("embed") === "1") {
+  document.body.classList.add("embed");
+}
 const messagesEl = document.getElementById("messages");
 const formEl = document.getElementById("composer");
 const inputEl = document.getElementById("input");
@@ -25,6 +30,10 @@ function findFaq(text) {
     }
   }
   return best;
+}
+
+function hasAny(text, keywords) {
+  return tokenize(text).some((w) => keywords.includes(w));
 }
 
 function wantsHuman(text) {
@@ -130,8 +139,8 @@ function offerHandoff(reason) {
 function startHandoff() {
   mode = "human";
   reply(() => {
-    addMessage("Connecting you with our team now. A barista will reply in a moment ☕", "bot");
-    addSystemNote(`${BUSINESS.agentName} from Brew & Bean joined the chat`);
+    addMessage("Connecting you with our team now. Someone will reply in a moment ☕", "bot");
+    addSystemNote(`${BUSINESS.agentName} from ${BUSINESS.name} joined the chat`);
     reply(() => {
       addMessage(
         `Hi! I'm ${BUSINESS.agentName}. I've read your conversation so far. How can I help you today?`,
@@ -169,6 +178,12 @@ function handleUser(text, knownFaq) {
         { label: "Ask something else", onClick: () => reply(() => { addMessage("Of course! Pick a topic or type your question:", "bot"); addButtons(faqButtons()); }, 500) },
         { label: "Talk to a human", primary: true, onClick: () => { addMessage("I'd like to talk to a human", "user"); startHandoff(); } },
       ]);
+    } else if (hasAny(text, GREETING_KEYWORDS)) {
+      addMessage(`Hi! 👋 Welcome to ${BUSINESS.name}. What can I help you with today?`, "bot");
+      addButtons(faqButtons());
+    } else if (hasAny(text, THANKS_KEYWORDS)) {
+      addMessage("You're welcome! ☕ Anything else I can help with?", "bot");
+      addButtons(faqButtons());
     } else {
       offerHandoff("Sorry, I'm not sure about that one. Would you like me to connect you with a member of our team?");
     }
