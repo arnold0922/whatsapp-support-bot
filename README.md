@@ -6,6 +6,13 @@ A chat demo for [Boucla Cafe](https://boucla-cafe-subiaco.vercel.app/), a Medite
 No install or server needed. Open `index.html` (the landing page) in any browser and click **Try the demo** to open the chat (`chat.html`).
 (Or run `npx serve .` and open the link it prints.)
 
+## Embed on your website
+Add this one line before `</body>` on any page. A floating chat button appears in the bottom-right corner:
+```html
+<script src="https://YOUR-VERCEL-URL/widget.js" defer></script>
+```
+To preview it locally, open `widget-demo.html`. It shows the Boucla site with the widget on top.
+
 ## What it does
 - **5 FAQs:** opening hours, cakes & pre-orders, menu & prices, location & seating, contact details.
 - **Greetings:** "hello" and "thanks" get a friendly reply instead of a handoff.

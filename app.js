@@ -1,4 +1,9 @@
 // Chat logic: simulated AI that matches FAQs by keywords and hands off to a human.
+
+// Embed mode (inside the website widget): full-size chat with no back link.
+if (new URLSearchParams(location.search).get("embed") === "1") {
+  document.body.classList.add("embed");
+}
 const messagesEl = document.getElementById("messages");
 const formEl = document.getElementById("composer");
 const inputEl = document.getElementById("input");
